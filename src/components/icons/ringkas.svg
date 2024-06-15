@@ -1,0 +1,18 @@
+<svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.9996 51.5414C42.6476 51.5414 51.2794 42.9095 51.2794 32.2615C51.2794 21.6135 42.6476 12.9817 31.9996 12.9817C21.3517 12.9817 12.7197 21.6135 12.7197 32.2615C12.7197 42.9095 21.3517 51.5414 31.9996 51.5414Z" fill="#EFCA66"/>
+<path d="M38.6676 25.5933H25.3291V38.9317H38.6676V25.5933Z" fill="url(#paint0_linear_744_1390)"/>
+<path d="M47.0098 37.2645L42.0088 32.2613L47.0098 27.2601" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M42.0088 32.2616H55.7138" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M17.1562 27.2601L22.1595 32.2613L17.1562 37.2645" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M22.1582 32.2616H8.45312" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M27.0811 47.1895L32.0822 42.1884L37.0855 47.1895" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M32.082 42.1882V55.8934" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M37.0855 17.3337L32.0822 22.3371L27.0811 17.3337" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<path d="M32.082 22.3369V8.63184" stroke="#231F20" stroke-width="1.7059" stroke-miterlimit="10"/>
+<defs>
+<linearGradient id="paint0_linear_744_1390" x1="25.3291" y1="32.2615" x2="38.6676" y2="32.2615" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3D75F3"/>
+<stop offset="1" stop-color="#0A52F1"/>
+</linearGradient>
+</defs>
+</svg>
