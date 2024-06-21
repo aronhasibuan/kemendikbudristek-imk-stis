@@ -16,35 +16,35 @@
       <!-- Path -->
       <div class="flex items-center ml-4">
         <a href="/home">
-          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
         </a>
-        <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/tugasdanfungsi">TUGAS DAN FUNGSI</a>
+        <a class="text-white bg-[#2980B9] rounded-r p-2 mr-1 hover:bg-[#828282]" href="/tugasdanfungsi">TUGAS DAN FUNGSI</a>
       </div>
     </div>
 
     <!--Content-->
     <div class="mt-[-76px] ml-32 mr-32 mb-32">
 
-        <h3 class="mb-16 font-bold text-[32px] text-center">
+        <h3 class="mb-16 font-bold text-xl md:text-[32px] text-center">
             Tugas dan Fungsi Kemendikbudristek Berdasarkan Peraturan Presiden Republik Indonesia Nomor 62 tahun 2021
             tentang Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
         </h3>
 
         <div class="mb-10">
-            <h2 class="text-[32px] font-semibold mb-4">
+            <h2 class="text-xl md:text-[32px] font-semibold mb-4">
                 Tugas Kemendikbudristek
             </h2>
-            <p class="mb-4 text-justify text-[16px]">
+            <p class="mb-4 text-justify text-sm md:text-[16px]">
                 Kemendikbudristek mempunyai tugas menyelenggarakan urusan pemerintahan di bidang pendidikan, 
                 kebudayaan, ilmu pengetahuan, dan teknologi untuk membantu Presiden dalam menyelenggarakan pemerintahan negara.
             </p>
         </div>
 
         <div class="mb-10">
-          <h2 class="text-[32px] font-semibold mb-4"> 
+          <h2 class="text-xl md:text-[32px] font-semibold mb-4"> 
             Fungsi Kemendikbudristek
           </h2>
-          <ol class="list-decimal list-outside ml-5">
+          <ol class="list-decimal list-outside ml-5 text-sm md:text-[16px] text-justify">
             <li>Perumusan dan penetapan kebijakan di bidang pendidik dan tenaga kependidikan, pendidikan anak usia dini, pendidikan dasar, pendidikan menengah, pendidikan vokasi, pendidikan tinggi, dan kebudayaan;</li>
             <li>Perumusan dan penetapan kebijakan di bidang ilmu pengetahuan dan teknologi;</li>
             <li>Koordinasi dan sinkronisasi pelaksanaan kebijakan di bidang ilmu pengetahuan dan teknologi di perguruan tinggi dalam rangka melaksanakan tridharma perguruan tinggi;</li>

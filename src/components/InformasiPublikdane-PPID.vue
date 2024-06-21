@@ -36,7 +36,9 @@
         <img src="../components/icons/eppid.svg" alt="e-PPID Logo" class="w-[163px] h-[200px]">
       </div>
       <div class="flex items-start">
-        <img src="../components/icons/panah.svg" alt="Panah Logo" class="w-[41px] h-[31px] hover:cursor-pointer">
+        <a href="https://ppid.kemdikbud.go.id/">
+          <img src="../components/icons/panah.svg" alt="Panah Logo" class="w-[41px] h-[31px] hover:cursor-pointer">
+        </a>
       </div>
     </div>
 
