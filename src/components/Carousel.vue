@@ -92,6 +92,7 @@
     margin: 0 auto;
     max-width: 1000px;
     position: relative;
+    overflow: hidden;
   }
   
   .gallery-item {
