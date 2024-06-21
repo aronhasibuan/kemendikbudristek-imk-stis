@@ -1,10 +1,10 @@
 <template>
 
-    <footer class="bg-[#005689] text-white py-8">
+    <footer class="bg-[#005689] text-white py-8 w-full">
 
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 w-full">
 
-        <div class="flex flex-col md:flex-row justify-between items-start">
+        <div class="flex flex-col md:flex-row justify-between items-start konten">
 
           <!-- Logo dan Nama Kementerian -->
           <div class="flex flex-col md:flex-row md:items-start items-center mr-auto flex-grow ml-4">
@@ -81,3 +81,12 @@
     </footer>
 
 </template>
+
+<style>
+@media(max-width: 1020px){
+    .konten{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

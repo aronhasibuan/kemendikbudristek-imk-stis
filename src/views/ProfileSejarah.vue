@@ -26,7 +26,7 @@
     <!-- Content -->
     <div class="container mx-auto px-4 py-8 mt-[-100px] konten">
       <div class="relative">
-        <div v-for="(event, index) in events" :key="index" class="mb-8 flex flex-col md:flex-row justify-between items-center w-full relative z-10">
+        <div v-for="(event, index) in events" :key="index" class="mb-8 flex flex-col md:flex-row justify-between items-center w-full relative">
           <div :class="['flex', index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse', 'flex-col']">
             <div class="flex items-center justify-center space-x-4 md:mr-4 mb-4 md:mb-0">
               <div class="w-32 h-32 flex items-center justify-center rounded-lg">

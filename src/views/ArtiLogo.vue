@@ -267,7 +267,7 @@ export default {
   border-color: #005689;
 }
 
-@media(max-width: 1280px){
+@media(min-width: 1280px){
     .konten{
       max-width: 1000px;
       margin-left: 130px;
