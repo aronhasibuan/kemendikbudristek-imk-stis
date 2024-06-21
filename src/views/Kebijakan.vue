@@ -60,7 +60,6 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
                                 <a :href=document.seeMoreLink>
                                     <img src="../components/icons/unduh.svg" alt="">
@@ -88,7 +87,6 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
                                 <a :href=document.seeMoreLink>
                                     <img src="../components/icons/unduh.svg" alt="">
@@ -116,7 +114,6 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
                                 <a :href=document.seeMoreLink>
                                     <img src="../components/icons/unduh.svg" alt="">
