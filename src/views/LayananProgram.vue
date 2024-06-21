@@ -1,9 +1,9 @@
 <template>
     <div class="flex items-center ml-20 mt-10">
       <a href="/home">
-        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
       </a>
-      <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">LAYANAN & PROGRAM</a>
+      <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282] rounded-r" href="/profil">LAYANAN & PROGRAM</a>
     </div>
   
     <div class=" p-4 mb-10">
@@ -18,7 +18,6 @@
         </p>
       </div>
       <div class="container-box mx-auto space-y-4 p-4 md:p-0">
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Siswa & Mahasiswa</h2>
             <p class="text-justify teks-bawah">
@@ -27,8 +26,6 @@
               pembelajaran, program bimbingan, dan kegiatan ekstrakurikuler.
             </p>
           </div>
-        </a>
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Guru & Dosen</h2>
             <p class="text-justify teks-bawah">
@@ -37,8 +34,6 @@
               pengembangan karir, dan intensif untuk tenaga pengajar.
             </p>
           </div>
-        </a>      
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm ">
             <h2 class="text-xl container-judul mb-2 text-justify">Orang Tua</h2>
             <p class="text-justify teks-bawah">
@@ -47,8 +42,6 @@
               workshop, dan program keterlibatan orang tua dalam proses belajar mengajar.
             </p>
           </div>
-        </a>
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Sekolah & Kampus</h2>
             <p class="text-justify teks-bawah">
@@ -57,8 +50,6 @@
               operasional serta pengembangan kurikulum.
             </p>
           </div>
-        </a>
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Budaya & Bahasa</h2>
             <p class="text-justify teks-bawah">
@@ -67,8 +58,6 @@
               pembinaan bahasa lokal serta nasional.
             </p>
           </div>  
-        </a>
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Pemerintah Daerah</h2>
             <p class="text-justify teks-bawah">
@@ -77,8 +66,6 @@
               kolaborasi, dan program-program pengembangan daerah.
             </p>
           </div>  
-        </a>
-        <a href="" class="p-4">
           <div class="p-4 box-bawah shadow-sm">
             <h2 class="text-xl container-judul mb-2 text-justify">Masyarakat & Mitra</h2>
             <p class="text-justify teks-bawah">
@@ -87,17 +74,10 @@
               untuk mendukung pendidikan dan kebudayaan melalui kerjasama dan partisipasi aktif.
             </p>
           </div>  
-        </a>
       </div>
     </div>
   </template>
-  
-  <script>
-  export default {
-    name: 'Profil'
-  }
-  </script>
-  
+   
   <style scoped>
   .container-box {
     max-width: 700px;

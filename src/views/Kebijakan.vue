@@ -4,10 +4,10 @@
         <!--Path-->
         <div class="flex items-center mt-10 ml-2">
             <a href="/home">
-                <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+                <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
             </a>
-            <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
-            <a href="/kebijakan" class="text-white bg-[#253C80] rounded-lg p-2 hover:bg-[#828282]">KEBIJAKAN</a>
+            <a class="text-white bg-[#2980B9] p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+            <a href="/kebijakan" class="text-white bg-[#253C80] rounded-r p-2 hover:bg-[#828282]">KEBIJAKAN</a>
         </div>
 
         <!--Pencarian-->
@@ -60,11 +60,10 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
-                                <button @click="downloadDocument(document)" class="">
+                                <a :href=document.seeMoreLink>
                                     <img src="../components/icons/unduh.svg" alt="">
-                                </button>
+                                </a>
                                 <p class="text-gray-600 ml-7">{{ document.downloads }} downloads</p>
                             </div>
                         </div>
@@ -88,11 +87,10 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
-                                <button @click="downloadDocument(document)" class="">
+                                <a :href=document.seeMoreLink>
                                     <img src="../components/icons/unduh.svg" alt="">
-                                </button>
+                                </a>    
                                 <p class="text-gray-600 ml-7">{{ document.downloads }} downloads</p>
                             </div>
                         </div>
@@ -116,11 +114,10 @@
                             <h4 class="text-4xl font-bold mb-2">{{ document.title }}</h4>
                             <p class="text-gray-600 mb-2">{{ document.date }}</p>
                             <p class="mb-2 text-xl">{{ document.description }}</p>
-                            <a :href="document.seeMoreLink" class="text-blue-500 hover:underline">Lihat Selengkapnya >></a>
                             <div class="flex flex-row items-center mt-4">
-                                <button @click="downloadDocument(document)" class="">
-                                    <img src="../components/icons/lihatjurnal.svg" alt="">
-                                </button>
+                                <a :href=document.seeMoreLink>
+                                    <img src="../components/icons/unduh.svg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -139,9 +136,13 @@
                 <div v-if="selected === 3"> 
                     <div class="grid grid-cols-3 gap-4">
                         <div v-for="infographic in displayedDocuments" :key="infographic.id">
-                            <img :src="infographic.image" alt="Infographic Image" class="w-full h-auto mb-2">
+                            <img :src="infographic.image" alt="Infographic Image" class="w-full h-auto mb-2 cursor-pointer" @click="showImageModal(infographic.image)">
                             <h4 class="text-lg font-bold ml-5">{{ infographic.title }}</h4>
                         </div>
+                    </div>
+
+                    <div v-if="isModalOpen" class="fixed inset-0 flex items-center justify-center z-50" style="background-color: rgba(0, 0, 0, 0.3);" @click="closeModal">
+                        <img :src="modalImage" alt="Infographic Image" class="h-full">
                     </div>
 
                     <div class="flex justify-center">
@@ -163,6 +164,36 @@
 
 <script>
 import Pagination from 'v-pagination-3';
+import buku1 from '@/assets/Kebijakan/Buku 1.svg';
+import buku2 from '@/assets/Kebijakan/Buku 2.svg';
+import buku3 from '@/assets/Kebijakan/Buku 3.svg';
+import buku4 from '@/assets/Kebijakan/Buku 4.svg';
+import buku5 from '@/assets/Kebijakan/Buku 5.svg';
+import buku6 from '@/assets/Kebijakan/Buku 6.svg';
+import buku7 from '@/assets/Kebijakan/Buku 7.svg';
+import buku8 from '@/assets/Kebijakan/Buku 8.svg';
+import buku9 from '@/assets/Kebijakan/Buku 9.svg';
+import risalah1 from '@/assets/Kebijakan/Risalah 1.svg';
+import risalah2 from '@/assets/Kebijakan/Risalah 2.svg';
+import risalah3 from '@/assets/Kebijakan/Risalah 3.svg';
+import risalah4 from '@/assets/Kebijakan/Risalah 4.svg';
+import risalah5 from '@/assets/Kebijakan/Risalah 5.svg';
+import risalah6 from '@/assets/Kebijakan/Risalah 6.svg';
+import risalah7 from '@/assets/Kebijakan/Risalah 7.svg';
+import risalah8 from '@/assets/Kebijakan/Risalah 8.svg';
+import risalah9 from '@/assets/Kebijakan/Risalah 9.svg';
+import jurnal1 from '@/assets/Kebijakan/Jurnal 1.svg';
+import jurnal2 from '@/assets/Kebijakan/Jurnal 2.svg';
+import jurnal3 from '@/assets/Kebijakan/Jurnal 3.svg';
+import infografis1 from '@/assets/Kebijakan/Infografis 1.svg';
+import infografis2 from '@/assets/Kebijakan/Infografis 2.svg';
+import infografis3 from '@/assets/Kebijakan/Infografis 3.svg';
+import infografis4 from '@/assets/Kebijakan/Infografis 4.svg';
+import infografis5 from '@/assets/Kebijakan/Infografis 5.svg';
+import infografis6 from '@/assets/Kebijakan/Infografis 6.svg';
+import infografis7 from '@/assets/Kebijakan/Infografis 7.svg';
+import infografis8 from '@/assets/Kebijakan/Infografis 8.svg';
+
 export default {
     data() {
         return {
@@ -172,247 +203,249 @@ export default {
             page: 1,
             limit: 6,
             searchQuery: '',
+            isModalOpen: false,
+            modalImage: '',
             documents: [
                 {
                     id: 1,
-                    image: 'src/assets/Kebijakan/Buku 1.svg',
+                    image: buku1,
                     title: 'Extended Abstract: Forum on Education and Learning Transformation',
                     date: '22 Mei 2024',
                     description: 'Dokumen ini merupakan kompilasi hasil diskusi dari Forum on Education and Learning Transformation (FELT) yang diadakan pada bulan November 2023. Forum ini merupakan kerjasama antara Pusat Standar dan Kebijakan...',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=514',
                     downloads: 39
                 },
                 {
                     id: 2,
-                    image: 'src/assets/Kebijakan/Buku 2.svg',
+                    image: buku2,
                     title: 'Menavigasi Tantangan Pembelajaran Bahasa Inggris di Sekolah Menuju Literasi Global',
                     date: '08 Mei 2024',
                     description: 'Menavigasi Tantangan Pembelajaran Bahasa Inggris di Sekolah Menuju Literasi Global',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=512',
                     downloads: 55
                 },
                 {
                     id: 3,
-                    image: 'src/assets/Kebijakan/Buku 3.svg',
+                    image: buku3,
                     title: "Laying the Foundations of Systemic Change in Education: Reflections on Indonesia's Merdeka Belajar Reform",
                     date: '06 Mei 2024',
                     description: "Laying the Foundations of Systemic Change in Education: Reflections on Indonesia's Merdeka Belajar Reform",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=511',
                     downloads: 28
                 },
                 {
                     id: 4,
-                    image: 'src/assets/Kebijakan/Buku 4.svg',
+                    image: buku4,
                     title: "Membuka Pintu Sekolah untuk Semua: Perubahan Kebijakan PPDB dan Dampaknya bagi Pemerataan Kualitas Pendidikan",
                     date: '19 Maret 2024',
                     description: "Membuka Pintu Sekolah untuk Semua: Perubahan Kebijakan PPDB dan Dampaknya bagi Pemerataan Kualitas Pendidikan",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=510',
                     downloads: 42
                 },
                 {
                     id: 5,
-                    image: 'src/assets/Kebijakan/Buku 5.svg',
+                    image: buku5,
                     title: "Menuju Terang Literasi: Ketika Membaca Membuat Anak-anak Bahagia",
                     date: '06 Desember 2023',
                     description: "Buku ini berisi kumpulan tulisan yang menceritakan hasil pengamatan terhadap pembelajaran di beberapa sekolah di Bali. Sekolah-sekolah tersebut mendapat pendampingan dari Yayasan Literasi Anak Indonesai (YLAI), sebu...",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=496',
                     downloads: 24
                 },
                 {
                     id: 6,
-                    image: 'src/assets/Kebijakan/Buku 6.svg',
+                    image: buku6,
                     title: "Sekolah Tangguh di Indonesia: Laporan Rapor Pendidikan Tahun 2023",
                     date: '10 November 2023',
                     description: "Sekolah Tangguh di Indonesia: Laporan Rapor Pendidikan Tahun 2023",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=495',
                     downloads: 32
                 },
                 {
                     id: 7,
-                    image: 'src/assets/Kebijakan/Buku 7.svg',
+                    image: buku7,
                     title: "Praktik-praktik Baik Lingkungan Belajar dan Capaian Pembelajaran: Laporan Rapor Pendidikan Tahun 2023",
                     date: '09 November 2023',
                     description: "Praktik-praktik Baik Lingkungan Belajar dan Capaian Pembelajaran: Laporan Rapor Pendidikan Tahun 2023",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=494',
                     downloads: 35
                 },
                 {
                     id: 8,
-                    image: 'src/assets/Kebijakan/Buku 8.svg',
+                    image: buku8,
                     title: "[STUDI KESENJANGAN PEMBELAJARAN - 4] Bangkit Lebih Kuat: Pemulihan Pembelajaran Pasca Pandemi COVID 19 Studi Kasus INOVASI",
                     date: '19 Oktober 2023',
                     description: "Bangkit Lebih Kuat: Pemulihan Pembelajaran Pasca Pandemi COVID 19 Studi Kasus INOVASI",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=493',
                     downloads: 35
                 },
                 {
                     id: 9,
-                    image: 'src/assets/Kebijakan/Buku 9.svg',
+                    image: buku9,
                     title: "[STUDI KESENJANGAN PEMBELAJARAN - 3] Kesenjangan yang Semakin Meleber: Dampak Pandemi COVID-19 pada Siswa dari Kelompok Paling Rentan di Indonesia",
                     date: '18 Oktober 2023',
                     description: "[STUDI KESENJANGAN PEMBELAJARAN - 3] Kesenjangan yang Semakin Meleber: Dampak Pandemi COVID-19 pada Siswa dari Kelompok Paling Rentan di Indonesia",
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=492',
                     downloads: 35
                 },
             ],
             risalah: [
                 {
                     id: 1,
-                    image: 'src/assets/Kebijakan/Risalah 1.svg',
+                    image: risalah1,
                     title: 'Transformasi Standar pada Lembaga Kursus dan Pelatihan',
                     date: '30 April 2024',
                     description: 'Transformasi Standar pada Lembaga Kursus dan Pelatihan',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_03_Maret_2024_Transformasi_Standar_pada_Kursus.pdf',
                     downloads: 18
                 },
                 {
                     id: 2,
-                    image: 'src/assets/Kebijakan/Risalah 2.svg',
+                    image: risalah2,
                     title: 'Optimalisasi Komunitas Belajar di Sekolah Guna Menyukseskan Implementasi Kurikulum Merdeka',
                     date: '13 Februari 2024',
                     description: 'Optimalisasi Komunitas Belajar di Sekolah Guna Menyukseskan Implementasi Kurikulum Merdeka',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=348',
                     downloads: 21
                 },
                 {
                     id: 3,
-                    image: 'src/assets/Kebijakan/Risalah 3.svg',
+                    image: risalah3,
                     title: 'Tantangan Penguatan Otonomi dan Agensi Guru dalam Implementasi Kurikulum Merdeka',
                     date: '23 Januari 2024',
                     description: 'Tantangan Penguatan Otonomi dan Agensi Guru dalam Implementasi Kurikulum Merdeka',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_Tantangan_Penguatan_Otonomi_dan_Agensi_Guru_dalam_IKM_No__1_Januari_2024.pdf',
                     downloads: 21
                 },
                 {
                     id: 4,
-                    image: 'src/assets/Kebijakan/Risalah 4.svg',
+                    image: risalah4,
                     title: 'Optimalisasi Program Buku bacaan bermutu untuk Penguatan Literasi Indonesia',
                     date: '07 November 2023',
                     description: 'Optimalisasi Program Buku bacaan bermutu untuk Penguatan Literasi Indonesia',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/service/download.php?kategori=kebijakan&id=346',
                     downloads: 20
                 },
                 {
                     id: 5,
-                    image: 'src/assets/Kebijakan/Risalah 5.svg',
+                    image: risalah5,
                     title: 'Tantangan Penerapan Pembelajaran yang Sesuai dan Iklim Keamanan di Jenjang Pendidikan Anak Usia Dini',
                     date: '06 November 2023',
                     description: 'Tantangan Penerapan Pembelajaran yang Sesuai dan Iklim Keamanan di Jenjang Pendidikan Anak Usia Dini',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_No_7_Oktober_2023_Tantangan_Penerapan_Pembelajaran_yang_sesuai_dan_Iklim_Keamanan_di_Jenjang_PAUD.pdf',
                     downloads: 10
                 },
                 {
                     id: 6,
-                    image: 'src/assets/Kebijakan/Risalah 6.svg',
+                    image: risalah6,
                     title: 'Urgensi Pendekatan Asimetris dalam Program Sekolah Penggerak',
                     date: '16 Oktober 2023',
                     description: 'Urgensi Pendekatan Asimetris dalam Program Sekolah Penggerak',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/No__6_September_2023_Urgensi_Pendekatan_Asimetris_dalam_Program_Sekolah_Penggerak_(OK).pdf',
                     downloads: 10
                 },
                 {
                     id: 7,
-                    image: 'src/assets/Kebijakan/Risalah 7.svg',
+                    image: risalah7,
                     title: 'Perbaikan Lingkungan Belajar Untuk Meningkatkan Capaian Pembelajaran',
                     date: '09 Oktober 2023',
                     description: 'Perbaikan Lingkungan Belajar Untuk Meningkatkan Capaian Pembelajaran',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_PSKP__No__4_September_2023_Perbaikan_Lingkungan_Belajar_(OK).pdf',
                     downloads: 6
                 },
                 {
                     id: 8,
-                    image: 'src/assets/Kebijakan/Risalah 8.svg',
+                    image: risalah8,
                     title: 'Urgensi Perbaikan Regulasi Sekolah Rumah Sebagai Bentuk Pemenuhan Hak Pendidikan Anak',
                     date: '09 Oktober 2023',
                     description: 'Urgensi Perbaikan Regulasi Sekolah Rumah Sebagai Bentuk Pemenuhan Hak Pendidikan Anak',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_PSKP_No_5_September_2023_Urgensi_Perbaikan_Regulasi_Sekolah_Rumah_(1).pdf',
                     downloads: 4
                 },
                 {
                     id: 9,
-                    image: 'src/assets/Kebijakan/Risalah 9.svg',
+                    image: risalah9,
                     title: 'Buku Bacaan Digital Untuk Meningkatkan Literasi Anak',
                     date: '11 September 2023',
                     description: 'Buku Bacaan Digital Untuk Meningkatkan Literasi Anak',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://pskp.kemdikbud.go.id/assets_front/images/produk/1-gtk/kebijakan/Risalah_Kebijakan_PSKP_Buku_Bacaan_Digital_untuk_Meningkatkan_Literasi_Anak_(OK).pdf',
                     downloads: 5
                 },
             ],
             jurnal: [
                 {
                     id: 1,
-                    image: 'src/assets/Kebijakan/Jurnal 1.svg',
+                    image: jurnal1,
                     title: 'Vol. 16 No. 2 (2023)',
                     date: '06 Mei 2024',
                     description: 'The publication of this edition was delayed due to the OJS upgrading process and a hacking incident. After maintenance were completed, the JPKP editorial team continued the article selection process in accordance to the SOP, and..',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://jurnalpuslitjakdikbud.kemdikbud.go.id/index.php/litjak/issue/view/38',
                     downloads: 18
                 },
                 {
                     id: 2,
-                    image: 'src/assets/Kebijakan/Jurnal 2.svg',
+                    image: jurnal2,
                     title: 'Vol. 16 No. 1 (2023)',
                     date: '21 November 2023',
                     description: 'The publication of this edition was delayed due to the OJS upgrading process and a hacking incident. As a result, Jurnal Penelitian Kebijakan Pendidikan was unable to run the OJS from August to October 2023. In this edition, we...',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://jurnalpuslitjakdikbud.kemdikbud.go.id/index.php/litjak/issue/view/36',
                     downloads: 18
                 },
                 {
                     id: 3,
-                    image: 'src/assets/Kebijakan/Jurnal 3.svg',
+                    image: jurnal3,
                     title: 'Vol. 15 No. 2 (2022)',
                     date: '21 Februari 2023',
                     description: 'Jurnal Penelitian Kebijakan Pendidikan Volume 15 No. 2, 2022 consists 6 (six) articles with the theme of education policy. The first article is written by Dina Rahma Fadlilah and Yanti Herlanti about a review of Biology learning at...',
-                    seeMoreLink: '#',
+                    seeMoreLink: 'https://jurnalpuslitjakdikbud.kemdikbud.go.id/index.php/litjak/issue/view/35',
                     downloads: 18
                 },
             ],
             infographics: [
                 {
                     id: 1,
-                    image: 'src/assets/Kebijakan/Infografis 1.svg',
+                    image: infografis1,
                     title: 'Hasil Survei Kepuasan Masyarakat Penerbitan Jurnal Penelitian Kebijakan Pendidika...',
                     description:'Hasil Survei Kepuasan Masyarakat Penerbitan Jurnal Penelitian Kebijakan Pendidika...'
                 },
                 {
                     id: 2,
-                    image: 'src/assets/Kebijakan/Infografis 2.svg',
+                    image: infografis2,
                     title: 'Maklumat Pelayanan Pusat Standar dan Kebijakan Pendidikan',
                     description: 'Maklumat Pelayanan Pusat Standar dan Kebijakan Pendidikan'
                 },
                 {
                     id: 3,
-                    image: 'src/assets/Kebijakan/Infografis 3.svg',
+                    image: infografis3,
                     title: 'Tolak Gratifikasi dan Laporkan',
                     description: 'Tolak Gratifikasi dan Laporkan'
                 },
                 {
                     id: 4,
-                    image: 'src/assets/Kebijakan/Infografis 4.svg',
+                    image: infografis4,
                     title: 'Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM)',
                     description: 'Wilayah Bebas dari Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM)'
                 },
                 {
                     id: 5,
-                    image: 'src/assets/Kebijakan/Infografis 5.svg',
+                    image: infografis5,
                     title: 'Survei Tayangan Program Belajar dari Rumah (BDR) melalui TVRI Periode Januari-..',
                     description: 'Survei Tayangan Program Belajar dari Rumah (BDR) melalui TVRI Periode Januari-..'
                 },
                 {
                     id: 6,
-                    image: 'src/assets/Kebijakan/Infografis 6.svg',
+                    image: infografis6,
                     title: 'Usulan Koleksi Perpustakaan Kemendikbud Tahun 2020',
                     description: 'Usulan Koleksi Perpustakaan Kemendikbud Tahun 2020',
                 },
                 {
                     id: 7,
-                    image: 'src/assets/Kebijakan/Infografis 7.svg',
+                    image: infografis7,
                     title: 'Alur Proses Penelitian Puslitjakdikbud',
                     description: 'Alur Proses Penelitian Puslitjakdikbud',
                 },
                 {
                     id: 8,
-                    image: 'src/assets/Kebijakan/Infografis 8.svg',
+                    image: infografis8,
                     title: 'Peningkatan Literasi Membaca',
                     description: 'Peningkatan Literasi Membaca',
                 }
@@ -465,11 +498,27 @@ export default {
         hitungBanyakPage(x){
             let jumlahhalaman =  x/6;
             if (Number.isInteger(jumlahhalaman)) {
-                return jumlahhalaman; // Jika hasilnya bulat, langsung return angka bulatnya
+                return jumlahhalaman;
             } else {
-                return Math.ceil(jumlahhalaman); // Jika tidak bulat, gunakan Math.ceil untuk membulatkan ke atas
+                return Math.ceil(jumlahhalaman); 
             }
-        }
+        },
+        showImageModal(imageSrc) {
+            this.modalImage = imageSrc;
+            this.isModalOpen = true;
+        },
+        closeModal() {
+            this.isModalOpen = !this.isModalOpen;
+        },
     }
 };
 </script>
+
+<style scoped>
+.modal-image {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  height: 10px
+}
+</style>

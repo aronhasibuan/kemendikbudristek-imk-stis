@@ -14,12 +14,12 @@
       </div>
 
       <!-- Path -->
-      <div class="flex items-center ml-4">
+      <div class="flex items-center ml-4 rounded-l">
         <a href="/home">
-          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
         </a>
-        <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
-        <a class="text-white bg-[#253C80] rounded-lg p-2 hover:bg-[#828282]" href="/rencanastrategis">RENCANA STRATEGIS</a>
+        <a class="text-white bg-[#2980B9] p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+        <a class="text-white bg-[#253C80] rounded-r p-2 hover:bg-[#828282]" href="/rencanastrategis">RENCANA STRATEGIS</a>
       </div>
     </div>
 
@@ -27,10 +27,10 @@
     <div class="mt-[-76px] ml-32 mr-32 mb-32">
 
         <div class="mb-20">
-            <h2 class="text-[32px] font-semibold mb-4">
+            <h2 class="text-xl md:text-[32px] font-semibold mb-4">
                 Rencana Strategis (Renstra) Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
             </h2>
-            <p class="mb-4 text-justify text-[16px]">
+            <p class="mb-4 text-justify text-sm md:text-[16px]">
                 Rencana Strategis (Renstra) Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi 
                 (Kemendikbudristek) diatur dalam Peraturan Menteri Pendidikan, Kebudayaan, Riset, dan 
                 Teknologi (Permendikbudristek) Nomor 13 Tahun 2022 Tentang Perubahan Atas Peraturan Menteri 
@@ -40,88 +40,88 @@
             </p>
             <ul class="list-disc ml-4">
                 <li>
-                    <a href="https://www.kemdikbud.go.id/main/files/download/2021343872258a2" class="hover:text-[#005689]">Rencana Strategis (Renstra) Tahun 2020-2024 (.pdf)</a>
+                    <a href="https://www.kemdikbud.go.id/main/files/download/2021343872258a2" class="hover:text-[#005689] text-sm md:text-base">Rencana Strategis (Renstra) Tahun 2020-2024 (.pdf)</a>
                 </li>
                 <li>
-                    <a href="https://jdih.kemdikbud.go.id/arsip/Permendikbud%2012%20Tahun%202018.pdf" class="hover:text-[#005689]">Rencana Strategis (Renstra) Tahun 2015-2019 (.pdf)</a>
+                    <a href="https://jdih.kemdikbud.go.id/arsip/Permendikbud%2012%20Tahun%202018.pdf" class="hover:text-[#005689] text-sm md:text-base">Rencana Strategis (Renstra) Tahun 2015-2019 (.pdf)</a>
                 </li>
                 <li>
-                    <a href="https://www.kemdikbud.go.id/dokumen/renstra-2010-2014/renstra20102014.rar" class="hover:text-[#005689]">Rencana Strategis (Renstra) Tahun 2010-2014 (.rar)</a>
+                    <a href="https://www.kemdikbud.go.id/dokumen/renstra-2010-2014/renstra20102014.rar" class="hover:text-[#005689] text-sm md:text-base">Rencana Strategis (Renstra) Tahun 2010-2014 (.rar)</a>
                 </li>
             </ul>
         </div>
 
         <div>
-          <h2 class="text-[32px] font-semibold mb-4"> 
+          <h2 class="text-xl md:text-[32px] font-semibold mb-4"> 
               Laporan Akuntabilitas Kinerja Kemendikbudristek
           </h2>
-          <p class="mb-4 text-justify text-[16px]">
+          <p class="mb-4 text-justify text-sm md:text-[16px]">
             Berikut adalah informasi tentang Laporan Akuntabilitas Kinerja Kementerian Pendidikan, 
             Kebudayaan, Riset, dan Teknologi (Kemendikbudristek):
           </p>
           <ul class="list-disc ml-4">
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/7b4ec2ba683abd9" class="hover:text-[#005689]">Laporan Kinerja Kemendikbudristek Tahun 2023</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/7b4ec2ba683abd9" class="hover:text-[#005689] text-sm md:text-base">Laporan Kinerja Kemendikbudristek Tahun 2023</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/9addd82b6ae0104" class="hover:text-[#005689]">Laporan Kinerja Kemendikbudristek Tahun 2022</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/9addd82b6ae0104" class="hover:text-[#005689] text-sm md:text-base">Laporan Kinerja Kemendikbudristek Tahun 2022</a>
               </li>
               <li>
-                  <a href="https://kemdikbud.go.id/main/files/download/8504073353c0656" class="hover:text-[#005689]">Laporan Kinerja Kemendikbudristek Tahun 2021</a>
+                  <a href="https://kemdikbud.go.id/main/files/download/8504073353c0656" class="hover:text-[#005689] text-sm md:text-base">Laporan Kinerja Kemendikbudristek Tahun 2021</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/c5213072293e0db" class="hover:text-[#005689]">Laporan Hasil Monitoring dan Evaluasi Pelaksanaan Quick Wins Kemendikbudristek Semester I Tahun 2022</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/c5213072293e0db" class="hover:text-[#005689] text-sm md:text-base">Laporan Hasil Monitoring dan Evaluasi Pelaksanaan Quick Wins Kemendikbudristek Semester I Tahun 2022</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/8b81c6c50214ecf" class="hover:text-[#005689]">Laporan Hasil Monitoring dan Evaluasi Pelaksanaan Quick Wins Kemendikbudristek Triwulan IV Tahun 2021</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/8b81c6c50214ecf" class="hover:text-[#005689] text-sm md:text-base">Laporan Hasil Monitoring dan Evaluasi Pelaksanaan Quick Wins Kemendikbudristek Triwulan IV Tahun 2021</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/4bd5f2e699ddcbd" class="hover:text-[#005689]">Perjanjian Kinerja Mendikbudristek Tahun 2024</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/4bd5f2e699ddcbd" class="hover:text-[#005689] text-sm md:text-base">Perjanjian Kinerja Mendikbudristek Tahun 2024</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/1ceeeca861ee57f" class="hover:text-[#005689]">Perjanjian Kinerja Mendikbudristek Tahun 2023</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/1ceeeca861ee57f" class="hover:text-[#005689] text-sm md:text-base">Perjanjian Kinerja Mendikbudristek Tahun 2023</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/2a1b96a67800811" class="hover:text-[#005689]">Perjanjian Kinerja Mendikbudristek Tahun 2022</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/2a1b96a67800811" class="hover:text-[#005689] text-sm md:text-base">Perjanjian Kinerja Mendikbudristek Tahun 2022</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/f6de92fe3d8ac6a" class="hover:text-[#005689]">Perjanjian Kinerja Mendikbud Tahun 2021</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/f6de92fe3d8ac6a" class="hover:text-[#005689] text-sm md:text-base">Perjanjian Kinerja Mendikbud Tahun 2021</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/b7f142c3258e1d7" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2023</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/b7f142c3258e1d7" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2023</a>
               </li>
               <li>
-                  <a href="https://kemdikbud.go.id/main/files/download/910adf0f768fbfa" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2020</a>
+                  <a href="https://kemdikbud.go.id/main/files/download/910adf0f768fbfa" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2020</a>
               </li>
               <li>
-                  <a href="https://kemdikbud.go.id/main/files/download/92dd0855b08b068" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2019</a>
+                  <a href="https://kemdikbud.go.id/main/files/download/92dd0855b08b068" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2019</a>
               </li>
               <li>
-                  <a href="https://kemdikbud.go.id/main/files/download/9899b657b50db1a" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2018</a>
+                  <a href="https://kemdikbud.go.id/main/files/download/9899b657b50db1a" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2018</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/26b16c7b8e170c2" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2017</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/26b16c7b8e170c2" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2017</a>
               </li>
               <li>
-                  <a href="http://simpandata.kemdikbud.go.id/index.php/s/sgEontFFXr9ESHX" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2016</a>
+                  <a href="http://simpandata.kemdikbud.go.id/index.php/s/sgEontFFXr9ESHX" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2016</a>
               </li>
               <li>
-                  <a href="http://www.kemdikbud.go.id/main/uploads/default/documents/Informasi%20Publik/LAKIP%20KEMENDIKBUD%202015.pdf" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2015</a>
+                  <a href="http://www.kemdikbud.go.id/main/uploads/default/documents/Informasi%20Publik/LAKIP%20KEMENDIKBUD%202015.pdf" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2015</a>
               </li>
               <li>
-                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/pdf/LAKIP%20KEMENTERIAN%202014.pdf" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2014</a>
+                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/pdf/LAKIP%20KEMENTERIAN%202014.pdf" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2014</a>
               </li>
               <li>
-                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/pdf/LAKIP-kemendikbud-2013.pdf" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2013</a>
+                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/pdf/LAKIP-kemendikbud-2013.pdf" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2013</a>
               </li>
               <li>
-                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/kipweb/lakip2012/LAKIPKEMDIKBUD2012.pdf" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2012</a>
+                  <a href="http://www.kemdikbud.go.id/kemdikbud/dokumen/kipweb/lakip2012/LAKIPKEMDIKBUD2012.pdf" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2012</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/7f6aa51b2cbf99b" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2011</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/7f6aa51b2cbf99b" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2011</a>
               </li>
               <li>
-                  <a href="https://www.kemdikbud.go.id/main/files/download/5d81f1ac48eb1c0" class="hover:text-[#005689]">Lakip Kemendikbud Tahun 2010</a>
+                  <a href="https://www.kemdikbud.go.id/main/files/download/5d81f1ac48eb1c0" class="hover:text-[#005689] text-sm md:text-base">Lakip Kemendikbud Tahun 2010</a>
               </li>
           </ul>
         </div>

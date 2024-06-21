@@ -11,19 +11,19 @@
         <p class="text-[10px] text-white mt-2">999</p>
       </div>
     </div>
-
+ 
     <!-- Path -->
     <div class="flex items-center ml-4">
       <a href="/home">
-        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
       </a>
-      <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
-      <a class="text-white bg-[#253C80] rounded-lg p-2 hover:bg-[#828282]" href="/artilogo">LOGO</a>
+      <a class="text-white bg-[#2980B9] p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+      <a class="text-white bg-[#253C80] rounded-r p-2 hover:bg-[#828282]" href="/kurikulum">KURIKULUM</a>
     </div>
   </div>
 
   <!-- Content -->
-   <div class="flex items-center mt-[-76px] ml-32 mb-20">
+   <div class="flex items-center mt-[-76px] ml-32 mb-20 konten">
 
     <div class="flex items-start">
 
@@ -100,7 +100,7 @@
       </div>
 
       <!-- Dokumen Rujukan-->
-      <div class="self-start ml-10 w-[1000px]">
+      <div class="self-start ml-10 w-full">
         <h3 class="mb-4 text-[#0F1523] font-semibold text-2xl">Dokumen Rujukan</h3>
         <div class="flex items-center space-x-4 mb-2">
           <img src="../components/icons/panahkurikulum.svg" alt="" class="self-start mt-2">
@@ -123,6 +123,12 @@
 </template>
 
 <script>
+import gambarumum from '@/components/icons/umum.svg';
+import gambarholistik from '@/components/icons/holistik.svg';
+import gambarfokus from '@/components/icons/fokus.svg';
+import gambarinklusif from '@/components/icons/inklusif.svg';
+import gambarinisiatif from '@/components/icons/inisiatif.svg';
+import gambarringkas from '@/components/icons/ringkas.svg';
 export default {
   data() {
     return {
@@ -134,12 +140,12 @@ export default {
         { largeText: '3.376.903', smallText: 'Total Guru' }
       ],
       items: [
-        { id: 1, image: 'src/components/icons/umum.svg', text: 'Umum: hanya mengatur hal-hal prinsip' },
-        { id: 2, image: 'src/components/icons/holistik.svg', text: 'Holistik: bersifat lintas jalur, jenis, dan jenjang' },
-        { id: 3, image: 'src/components/icons/fokus.svg', text: 'Fokus pada kualitas pembelajaran, SKL sebagai acuan standar lainnya' },
-        { id: 4, image: 'src/components/icons/inklusif.svg', text: 'Inklusif: mempertimbangkan keragaman karakteristik satuan pendidikan di Indonesia' },
-        { id: 5, image: 'src/components/icons/inisiatif.svg', text: 'Memantik inisiatif dan inovasi' },
-        { id: 6, image: 'src/components/icons/ringkas.svg', text: 'Ringkas: mudah dipahami dan dijadikan kompas' }
+        { id: 1, image: gambarumum, text: 'Umum: hanya mengatur hal-hal prinsip' },
+        { id: 2, image: gambarholistik, text: 'Holistik: bersifat lintas jalur, jenis, dan jenjang' },
+        { id: 3, image: gambarfokus, text: 'Fokus pada kualitas pembelajaran, SKL sebagai acuan standar lainnya' },
+        { id: 4, image: gambarinklusif, text: 'Inklusif: mempertimbangkan keragaman karakteristik satuan pendidikan di Indonesia' },
+        { id: 5, image: gambarinisiatif, text: 'Memantik inisiatif dan inovasi' },
+        { id: 6, image: gambarringkas, text: 'Ringkas: mudah dipahami dan dijadikan kompas' }
       ],
     };
   },
@@ -162,4 +168,10 @@ export default {
   box-shadow: -10px 0px 15px -3px rgba(0, 0, 0, 0.1), -4px 0px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
+@media(max-width: 1280px){
+  .konten{
+    margin-left: 84px;
+    margin-top: -120px;
+  }
+  }
 </style>

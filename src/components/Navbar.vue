@@ -11,10 +11,10 @@
     <!-- Logo & Nama Kementerian -->
     <div class="flex items-center md:ml-0 ml-10">
       <a href="/home">
-        <img src="@/assets/logo.png" alt="Logo" class="md:w-28 w-10 h-auto md:ml-0 ml-6">
+        <img src="@/assets/logo.png" alt="Logo" class="md:w-28 w-10 h-auto md:ml-0 ml-6 logo_kementerian">
       </a>
       <div class="text-biruKemdikbudristek font-poppins font-bold text-sm md:text-xl">
-        <p class="hidden md:block">
+        <p class="hidden md:block nama_kementerian">
           Kementerian<br>
           Pendidikan, Kebudayaan,<br>
           Riset, dan Teknologi
@@ -24,23 +24,23 @@
 
     <!-- Menu -->
     <div class="md:ml-12">
-      <ul class="md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute bg-backgroundNavbar w-full top-14 duration-700 ease-in border-t-2 md:border-t-0" :class="[open ? 'left-0' : 'left-[-100%]']">
+      <ul class="md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute bg-backgroundNavbar w-full top-[104px] duration-700 ease-in border-t-2 md:border-t-0" :class="[open ? 'left-0' : 'left-[-100%]']">
         <li class="md:mr-14 md:my-0 my-6 relative" v-for="(link, index) in Links" :key="index">
           <div class="flex items-center">
             <img :src="link.image" alt="" class="mr-1 w-3 h-3">
-              <a :href="link.link" class="text-black font-bold text-base font-poppins hover:text-[#005689] hover:underline">{{ link.name }}</a>
+              <a :href="link.link" class="text-black font-bold text-base font-poppins hover:text-[#005689] hover:underline nama_link">{{ link.name }}</a>
             <img v-if="link.subLinks" src="../components/icons/panahkanan.svg" alt="" class="md:hidden ml-auto w-6 h-6 cursor-pointer" @click="toggleSublink(index)">
-          </div>
+          </div>  
 
 
           <!-- Sub Menu Untuk Screen Sedang -->
           <ul v-if="link.subLinks" class="top-full absolute left-0 hidden bg-[#D8E9F6] shadow-md w-max md:group-hover:block">
             <li v-for="(subLink, subIndex) in link.subLinks" :key="subIndex" class="relative group flex hover:bg-white items-center">
-              <a :href="subLink.link" class="block px-4 py-2 text-black font-medium font-poppins hover:text-[#005689]">{{ subLink.name }}</a>
+              <a :href="subLink.link" class="block px-4 py-2 text-black font-medium font-poppins hover:text-[#005689] nama_sublink">{{ subLink.name }}</a>
               <img v-if="subLink.subsublink" src="../components/icons/panahkananbiru.svg" alt="" class="ml-auto w-4 h-4 cursor-pointer">
               <ul v-if="subLink.subsublink" class="absolute left-full top-0 hidden bg-[#D8E9F6] shadow-md mt-0 w-max group-hover:block">
                 <li v-for="(subSubLink, subSubIndex) in subLink.subsublink" :key="subSubIndex">
-                  <a :href="subSubLink.link" class="block px-4 py-2 text-black font-medium font-poppins hover:bg-white hover:text-[#005689]">{{ subSubLink.name }}</a>
+                  <a :href="subSubLink.link" class="block px-4 py-2 text-black font-medium font-poppins hover:bg-white hover:text-[#005689] nama_sublink">{{ subSubLink.name }}</a>
                 </li>
               </ul>
             </li>
@@ -69,15 +69,15 @@
 
     <!-- Search Box -->
     <div class="flex items-center md:ml-0 ml-2 mr-4">
-      <input type="text" placeholder="Pencarian" class="md:px-4 md:py-2 py-1 rounded-l-full placeholder-black md:w-44 w-full md:text-lg text-xs text-center focus:outline-none" id="pencarian" name="pencarian">
-      <div class="bg-white md:px-4 md:py-2 rounded-r-full hover:bg-gray-200 md:w-30 md:h-11 w-auto h-6 flex items-center justify-center">
+      <input type="text" placeholder="Pencarian" class="md:px-4 md:py-2 py-1 rounded-l-full placeholder-black md:w-44 w-full md:text-lg text-xs text-center focus:outline-none pencarian" id="pencarian" name="pencarian">
+      <div class="bg-white md:px-4 md:py-2 rounded-r-full hover:bg-gray-200 md:w-30 md:h-11 w-auto h-6 flex items-center justify-center gambar_pencarian">
         <img src="../components/icons/kacapembesar.svg" alt="Search" class="w-full h-full md:p-0 p-1">
       </div>
     </div>
 
     <!-- Language Selector -->
     <div>
-      <select v-model="selectedOption" class="cursor-pointer md:w-24 w-12 bg-white rounded-lg border border-gray-300 text-gray-700 md:p-2 font-bold text-center md:text-lg text-xs p-1">
+      <select v-model="selectedOption" class="cursor-pointer md:w-24 w-12 bg-white rounded-lg border border-gray-300 text-gray-700 md:p-2 font-bold text-center md:text-lg text-xs p-1 language_selector">
         <option :style="{ backgroundColor: selectedOption === 'ID' ? '#005689' : '#D8E9F6', color: selectedOption === 'ID' ? '#ffffff' : '#005689' }" value="ID" selected>ID</option>
         <option :style="{ backgroundColor: selectedOption === 'EN' ? '#005689' : '#D8E9F6', color: selectedOption === 'EN' ? '#ffffff' : '#005689' }" value="EN">EN</option>
       </select>
@@ -88,6 +88,11 @@
 </template>
 
 <script>
+  import imageprofil from '@/components/icons/info.svg';
+  import imagekurikulum from '@/components/icons/toga.svg';
+  import imagelayananprogram from '@/components/icons/bag.svg';
+  import imagekebijakan from '@/components/icons/building.svg';
+
   export default {
     name: 'Navbar',
     data() {
@@ -98,7 +103,7 @@
           {
             name: "PROFIL",
             link: "/profil",
-            image: 'src/components/icons/info.svg',
+            image: imageprofil,
             expanded: false,
             subLinks: [
               { name: "Sejarah Kemendikbudristek", link: "/sejarah", expanded: false },
@@ -107,11 +112,11 @@
               { name: "Akuntabilitas Kinerja", link: "/akuntabilitaskinerja", expanded: false },
             ]
           },
-          { name: "KURIKULUM", link: "/kurikulum", image: 'src/components/icons/toga.svg', expanded: false },
+          { name: "KURIKULUM", link: "/kurikulum", image: imagekurikulum, expanded: false },
           {
             name: "LAYANAN & PROGRAM",
             link: "/layananprogram",
-            image: 'src/components/icons/bag.svg',
+            image: imagelayananprogram,
             expanded: false,
             subLinks: [
               {
@@ -192,7 +197,7 @@
               }
             ]
           },
-          { name: "KEBIJAKAN", link: "/kebijakan", image: 'src/components/icons/building.svg' }
+          { name: "KEBIJAKAN", link: "/kebijakan", image: imagekebijakan }
         ]
       };
     },
@@ -240,6 +245,41 @@
 
     .group:hover > img {
       transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .logo_kementerian{
+      width: 104px;
+    }
+
+    .nama_kementerian{
+      font-size: 12px;
+      margin: 0%;
+    }
+
+    .nama_link{
+      font-size: 13px;
+    }
+
+    .nama_sublink{
+      font-size: 13px;
+    }
+
+    .pencarian{
+      width: 150px;
+      height: 30px;
+      font-size: small;
+    }
+
+    .gambar_pencarian{
+      height: 30px;
+    }
+
+    .language_selector{
+      width: 60px;
+      height: 30px;
+      font-size: 10px;
     }
   }
 </style>

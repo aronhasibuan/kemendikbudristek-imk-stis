@@ -15,16 +15,16 @@
 
       <!-- Path -->
       <div class="flex items-center ml-4">
-        <a href="/home">
-          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+        <a href="/home" class="rounded-l">
+          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
         </a>
-        <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
-        <a class="text-white bg-[#253C80] rounded-lg p-2 hover:bg-[#828282]" href="/sejarah">SEJARAH</a>
+        <a class="text-white bg-[#2980B9] p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+        <a class="text-white bg-[#253C80] rounded-r p-2 hover:bg-[#828282]" href="/sejarah">SEJARAH</a>
       </div>
-    </div>
+    </div> 
 
     <!-- Content -->
-    <div class="container mx-auto px-4 py-8 mt-[-100px]">
+    <div class="container mx-auto px-4 py-8 mt-[-100px] konten">
       <div class="relative">
         <div v-for="(event, index) in events" :key="index" class="mb-8 flex flex-col md:flex-row justify-between items-center w-full relative z-10">
           <div :class="['flex', index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse', 'flex-col']">
@@ -141,162 +141,11 @@ export default {
   color: #4D4D4D;
 }
 
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.text-gray-600 {
-  color: #4B5563;
-}
-
-.md\\:flex-row {
-  flex-direction: row;
-}
-
-.md\\:flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.md\\:mr-4 {
-  margin-right: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.md\\:mb-0 {
-  margin-bottom: 0;
-}
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  margin-left: 1rem;
-}
-
-.space-x-4 > :not([hidden]) {
-  --space-x-reverse: 0;
-  margin-right: calc(1rem * var(--space-x-reverse));
-}
-
-.relative {
-  position: relative;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
-.object-contain {
-  object-fit: contain;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-gray-600 {
-  color: #718096;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  margin-left: 1rem;
-}
-
-.space-x-4 > :not([hidden]) {
-  --space-x-reverse: 0;
-  margin-right: calc(1rem * var(--space-x-reverse));
-}
-
-.md\\:flex-row {
-  flex-direction: row;
-}
-
-.md\\:flex-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.md\\:mr-4 {
-  margin-right: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.md\\:mb-0 {
-  margin-bottom: 0;
-}
+  @media(max-width: 1280px){
+    .konten{
+      margin-top: -100px;
+      max-width: 1000px;
+    }
+  }
 </style>
  

@@ -1,9 +1,9 @@
 <template>
     <div class="flex items-center ml-20 mt-10">
-      <a href="/home">
-        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+      <a href="/home" class="rounded-l">
+        <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
       </a>
-      <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+      <a class="text-white bg-[#2980B9] rounded-r p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
     </div>
   
     <div class=" p-4 mb-10">

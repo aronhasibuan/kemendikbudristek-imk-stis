@@ -28,7 +28,6 @@
         <p class="text-left text-[#2A7CBF] font-Poppins self-start">{{ content.text }}</p>
         <p class="text-right text-sm text-[#4D4D4D]">{{ content.date }}</p>
       </div>
-      <p class="font-medium text-20px text-[#005689] text-left mb-10 selengkapnya hover:cursor-pointer">Selengkapnya</p>
     </div>
   </div>
 </template>

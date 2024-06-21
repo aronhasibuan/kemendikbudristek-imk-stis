@@ -14,129 +14,191 @@
       </div>
 
       <!-- Path -->
-      <div class="flex items-center ml-4">
+      <div class="flex items-center ml-4 rounded-l">
         <a href="/home">
-          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282]">
+          <img src="../components/icons/home.svg" alt="Home Icon" class="w-[38px] h-[40px] bg-[#253C80] mr-1 p-2 hover:bg-[#828282] rounded-l">
         </a>
-        <a class="text-white bg-[#2980B9] rounded-lg p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
-        <a class="text-white bg-[#253C80] rounded-lg p-2 hover:bg-[#828282]" href="/artilogo">LOGO</a>
+        <a class="text-white bg-[#2980B9] p-2 mr-1 hover:bg-[#828282]" href="/profil">PROFIL</a>
+        <a class="text-white bg-[#253C80] rounded-r p-2 hover:bg-[#828282]" href="/artilogo">LOGO</a>
       </div>
     </div>
 
     <!--Content-->
-    <div>
-      <!-- Logo and Color Codes Section -->
-      <div class="relative flex items-center justify-center mt-[-70px] mb-40 ml-[-285px]" style="height: 321px;">
-        <div class="absolute inset-0 flex justify-center">
-          <img src="@/assets/artiLogo/logobox.svg" alt="Background Logo" class="[w-1154px] h-[321px] object-cover">
-        </div>
-        <div class="relative flex items-center">
-          <img src="../assets/logo.png" alt="Logo Kemdikbud" class="block mx-auto w-[350px] h-[238px]">
-          <div class="grid grid-cols-2 gap-4 mr-40">
-            <div class="flex items-start space-x-2 rounded-md p-2">
-              <div class="w-[55px] h-[55px] bg-[#297BBF]"></div>
-              <div>
-                <p class="text-sm font-medium ml-2">C : 95 <br>M : 25 <br>Y : 0 <br>K : 0</p>
+    <div class="konten">
+      
+      <!--Logo Screen Medium-->
+      <div class="logo hidden md:block">
+        <!-- Logo and Color Codes Section -->
+        <div class="relative flex items-center justify-center mt-[-70px] mb-56" style="height: 321px;">
+          <div class="relative flex items-center border-dashed-long rounded-2xl border-dashed bg-[#f5f5f5] pt-6 pb-6">
+            <img src="../assets/logo.png" alt="Logo Kemdikbud" class="block mx-auto w-[350px] h-[238px]">
+            <div class="grid grid-cols-2 gap-4 mr-40">
+              <div class="flex items-start space-x-2 rounded-md p-2">
+                <div class="w-[55px] h-[55px] bg-[#297BBF]"></div>
+                <div>
+                  <p class="text-sm font-medium ml-2">C : 95 <br>M : 25 <br>Y : 0 <br>K : 0</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium ml-10">R : 41 <br>G : 123 <br>B : 191</p>
+                </div>
               </div>
-              <div>
-                <p class="text-sm font-medium ml-10">R : 41 <br>G : 123 <br>B : 191</p>
-              </div>
-            </div>
 
-            <div class="flex items-start space-x-2 rounded-md p-2 ml-10">
-              <div class="w-[55px] h-[55px] bg-[#000000]"></div>
-              <div>
-                <p class="text-sm font-medium ml-2">C : 0 <br>M : 0 <br>Y : 0 <br>K : 100</p>
+              <div class="flex items-start space-x-2 rounded-md p-2 ml-10">
+                <div class="w-[55px] h-[55px] bg-[#000000]"></div>
+                <div>
+                  <p class="text-sm font-medium ml-2">C : 0 <br>M : 0 <br>Y : 0 <br>K : 100</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium ml-10">R : 0 <br>G : 0 <br>B : 0</p>
+                </div>
               </div>
-              <div>
-                <p class="text-sm font-medium ml-10">R : 0 <br>G : 0 <br>B : 0</p>
-              </div>
-            </div>
 
-            <div class="flex items-start space-x-2 rounded-md p-2">
-              <div class="w-[55px] h-[55px] bg-[#FBD206]"></div>
-              <div>
-                <p class="text-sm font-medium ml-2">C : 2 <br>M : 15 <br>Y : 100 <br>K : 0</p>
+              <div class="flex items-start space-x-2 rounded-md p-2">
+                <div class="w-[55px] h-[55px] bg-[#FBD206]"></div>
+                <div>
+                  <p class="text-sm font-medium ml-2">C : 2 <br>M : 15 <br>Y : 100 <br>K : 0</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium ml-10">R : 251 <br>G : 210 <br>B : 6</p>
+                </div>
               </div>
-              <div>
-                <p class="text-sm font-medium ml-10">R : 251 <br>G : 210 <br>B : 6</p>
-              </div>
-            </div>
 
-            <div class="flex items-start space-x-2 rounded-md p-2 ml-10">
-              <div class="w-[55px] h-[55px] bg-white border border-black"></div>
-              <div>
-                <p class="text-sm font-medium ml-2">C : 0 <br>M : 0 <br>Y : 0 <br>K : 0</p>
-              </div>
-              <div>
-                <p class="text-sm font-medium ml-10">R : 255 <br>G : 255 <br>B : 255</p>
+              <div class="flex items-start space-x-2 rounded-md p-2 ml-10">
+                <div class="w-[55px] h-[55px] bg-white border border-black"></div>
+                <div>
+                  <p class="text-sm font-medium ml-2">C : 0 <br>M : 0 <br>Y : 0 <br>K : 0</p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium ml-10">R : 255 <br>G : 255 <br>B : 255</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Uraian Lambang -->
-    <div class="relative flex items-center justify-center mb-44" style="height: 321px;">
-      <div class="absolute inset-0 flex justify-center"></div>
-      <div class="flex flex-col items-center p-8 bg-white font-poppins arti-style mx-auto" style="max-width: 1300px;">
-        <div class="w-full mt-8 space-y-4 text-justify">
-          <div class="text-center font-bold text-xl judul-style whitespace-nowrap">Uraian Lambang</div>
-          
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">1</div>
-            <div class="flex-1 ml-4">
-              <p>Bidang Segi Lima (Biru Muda) menggambarkan alam kehidupan Pancasila.</p>
+      <!--Logo Screen Small-->
+      <div class="md:hidden mb-96  justify-center">
+
+        <div class="flex justify-center mb-10">
+          <img src="../assets/logo.png" alt="Logo Kemdikbud" class="w-40 mt-[-60px]">
+        </div>
+
+        <div class="">
+
+          <div class="flex items-center space-x-2 rounded-md p-2">
+            <div class="w-8 h-8 bg-[#297BBF]"></div>
+            <div>
+              <div>
+                <p class="text-xs font-medium ml-2">C : 95, M : 25, Y : 0, K : 0</p>
+              </div>
+              <div>
+                <p class="text-xs font-medium ml-2">R : 41, G : 123, B : 191</p>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">2</div>
-            <div class="flex-1 ml-4">
-              <p>Semboyan Tut Wuri Handayani digunakan oleh Ki Hajar Dewantara dalam melaksanakan sistem pendidikan. Pencantuman semboyan ini berarti melengkapi penghargaan dan penghormatan kita terhadap alm Ki Hajar Dewantara yang hari lahirnya telah dijadikan Hari Pendidikan Nasional.</p>
+          <div class="flex items-center space-x-2 rounded-md p-2">
+            <div class="w-8 h-8 bg-[#000000]"></div>
+            <div>
+              <div>
+                <p class="text-xs font-medium ml-2">C : 0, M : 0, Y : 0, K : 100</p>
+              </div>
+              <div>
+                <p class="text-xs font-medium ml-2">R : 0, G : 0, B : 0</p>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">3</div>
-            <div class="flex-1 ml-4">
-              <p>Belenceng Menyala Bermotif Garuda Belenceng (menyala) merupakan lampu yang khusus dipergunakan pada pertunjukan wayang kulit. Cahaya belenceng membuat pertunjukan menjadi hidup.</p>
+          <div class="flex items-center space-x-2 rounded-md p-2">
+            <div class="w-8 h-8 bg-[#FBD206]"></div>
+            <div>
+              <div>
+                <p class="text-xs font-medium ml-2">C : 2, M : 15, Y : 100, K : 0</p>
+              </div>
+              <div>
+                <p class="text-xs font-medium ml-2">R : 251, G : 210, B : 6</p>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">4</div>
-            <div class="flex-1 ml-4">
-              <p>Burung Garuda (yang menjadi motif belenceng) memberikan gambaran sifat dinamis, gagah perkasa, mampu dan berani mandiri mengarungi angkasa luas. Ekor dan sayap garuda digambarkan masing-masing lima, yang berarti: 'satu kata dengan perbuatan Pancasila'.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">5</div>
-            <div class="flex-1 ml-4">
-              <p>Buku merupakan sumber bagi segala ilmu yang dapat bermanfaat bagi kehidupan manusia.</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">6</div>
-            <div class="flex-1 ml-4">
-              <p>Warna: Warna putih pada ekor dan sayap garuda dan buku berarti suci, bersih tanpa pamrih. Warna kuning emas pada nyala api berarti keagungan dan keluhuran pengabdian. Warna biru muda pada bidang segi lima berarti pengabdian yang tak kunjung putus dengan memiliki pandangan hidup yang mendalam (pandangan hidup Pancasila).</p>
+          <div class="flex items-center space-x-2 rounded-md p-2">
+            <div class="w-8 h-8 bg-white border border-black"></div>
+            <div>
+              <div>
+                <p class="text-xs font-medium ml-2">C : 0, M : 0, Y : 0, K : 0</p>
+              </div>
+              <div>
+                <p class="text-xs font-medium ml-2">R : 255, G : 255, B : 255</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="w-full mt-6 text-left text-sm relative" style="font-weight: 700; font-size: 14px;">
-          <hr class="h-px my-8 mx-auto garis1">
-          <hr class="h-px my-6 mx-auto garis2">
-          <p>Sumber:</p>
-          <p>
-            Keputusan Menteri Pendidikan dan Kebudayaan tanggal 6 September 1977, No.: 0398/M/1977
-            tentang penetapan Lambang Departemen Pendidikan dan Kebudayaan
-          </p>
+      </div>
+
+      <!-- Uraian Lambang -->
+      <div class="flex items-center justify-center mb-44" style="height: 321px;">
+        <div class="flex flex-col items-center p-8 bg-white font-poppins arti-style">
+          <div class="mt-8 space-y-4 text-justify">
+
+            <div class="text-center font-bold text-xl judul-style whitespace-nowrap">Uraian Lambang</div>
+            
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">1</div>
+              <div class="flex-1 ml-4">
+                <p>Bidang Segi Lima (Biru Muda) menggambarkan alam kehidupan Pancasila.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">2</div>
+              <div class="flex-1 ml-4">
+                <p>Semboyan Tut Wuri Handayani digunakan oleh Ki Hajar Dewantara dalam melaksanakan sistem pendidikan. Pencantuman semboyan ini berarti melengkapi penghargaan dan penghormatan kita terhadap alm Ki Hajar Dewantara yang hari lahirnya telah dijadikan Hari Pendidikan Nasional.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">3</div>
+              <div class="flex-1 ml-4">
+                <p>Belenceng Menyala Bermotif Garuda Belenceng (menyala) merupakan lampu yang khusus dipergunakan pada pertunjukan wayang kulit. Cahaya belenceng membuat pertunjukan menjadi hidup.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">4</div>
+              <div class="flex-1 ml-4">
+                <p>Burung Garuda (yang menjadi motif belenceng) memberikan gambaran sifat dinamis, gagah perkasa, mampu dan berani mandiri mengarungi angkasa luas. Ekor dan sayap garuda digambarkan masing-masing lima, yang berarti: 'satu kata dengan perbuatan Pancasila'.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">5</div>
+              <div class="flex-1 ml-4">
+                <p>Buku merupakan sumber bagi segala ilmu yang dapat bermanfaat bagi kehidupan manusia.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-8 h-8 flex justify-center items-center rounded-full bg-blue-200 text-center font-bold border border-blue-500">6</div>
+              <div class="flex-1 ml-4">
+                <p>Warna: Warna putih pada ekor dan sayap garuda dan buku berarti suci, bersih tanpa pamrih. Warna kuning emas pada nyala api berarti keagungan dan keluhuran pengabdian. Warna biru muda pada bidang segi lima berarti pengabdian yang tak kunjung putus dengan memiliki pandangan hidup yang mendalam (pandangan hidup Pancasila).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full mt-6 text-left text-sm relative" style="font-weight: 700; font-size: 14px;">
+            <hr class="h-px my-8 mx-auto garis1">
+            <hr class="h-px my-6 mx-auto garis2">
+            <p>Sumber:</p>
+            <p>
+              Keputusan Menteri Pendidikan dan Kebudayaan tanggal 6 September 1977, No.: 0398/M/1977
+              tentang penetapan Lambang Departemen Pendidikan dan Kebudayaan
+            </p>
+          </div>
         </div>
       </div>
+    
     </div>
 
 
@@ -198,4 +260,17 @@ export default {
   height: 38px;
   margin: 0 auto;
 }
+
+.border-dashed-long {
+  border-style: dashed;
+  border-width: 2px; 
+  border-color: #005689;
+}
+
+@media(max-width: 1280px){
+    .konten{
+      max-width: 1000px;
+      margin-left: 130px;
+    }
+  }
 </style>
